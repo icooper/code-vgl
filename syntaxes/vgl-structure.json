@@ -45,7 +45,7 @@
         },
         "keyword-parameter": {
             "name": "keyword.other.vgl-structure",
-            "match": "(?i)\\b(alias|allowed_characters|as|blob|case_sensitive|choose_type|datatype|default|delete_audit|descending|false_word|format|identities|insert_audit|library|links_to|lower_limit|modify_audit|nobuffer|noidentities|noindex|on|on_table|oracle_location|oracle_specific|parent|parent_table|phrase_type|physical_name|prompt|prompt_description|prompt_type|rdb_location|rdb_specific|read_only|rename_table|routine|silent|sqlserver_collation|sqlserver_collation_case_sensitive|sqlserver_location|sqlserver_specific|tableset|true_word|unique|upper_limit|used_for|valid)\\b"
+            "match": "(?i)\\b(alias|allowed_characters|as|blob|case_sensitive|choose_type|default|delete_audit|descending|false_word|format|identities|insert_audit|library|links_to|lower_limit|modify_audit|nobuffer|noidentities|noindex|on|on_table|oracle_location|oracle_specific|parent|parent_table|phrase_type|physical_name|prompt|prompt_description|prompt_type|rdb_location|rdb_specific|read_only|rename_table|routine|silent|sqlserver_collation|sqlserver_collation_case_sensitive|sqlserver_location|sqlserver_specific|tableset|true_word|unique|upper_limit|used_for|valid)\\b"
         },
 
         "literal": {
