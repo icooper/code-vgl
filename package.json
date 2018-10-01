@@ -2,9 +2,12 @@
     "name": "code-vgl",
     "version": "0.0.1",
     "engines": {
-        "vscode": ">=1.22.0"
+        "vscode": "^1.22.0"
     },
     "publisher": "Ian Cooper",
+    "author": "Ian Cooper",
+    "repository": "https://github.com/icooper/code-vgl",
+    "license": "MIT",
     "contributes": {
         "languages": [{
             "id": "vgl-structure",

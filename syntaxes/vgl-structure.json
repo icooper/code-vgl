@@ -1,11 +1,90 @@
 {
-    "scopeName": "vgl-structure",
+    "scopeName": "source.vgl-structure",
     "fileTypes": [ ],
+    "name": "vgl-structure",
     "patterns": [
-        {
+        { "include": "#keyword" },
+        { "include": "#comment" },
+        { "include": "#literal" }
+    ],
+
+    "repository": {
+        "keyword": {
+            "patterns": [
+                { "include": "#keyword-statement" },
+                { "include": "#keyword-datatype" },
+                { "include": "#keyword-datatype-with-comment" },
+                { "include": "#keyword-parameter" }
+            ]
+        },
+        "keyword-statement": {
+            "name": "storage.type.vgl-structure",
+            "match": "(?i)\\b(index|index_defaults|view|table|table_defaults|field)\\b"
+        },
+        "keyword-datatype": {
+            "match": "(?i)\\b(datatype)\\s+(boolean|date|identity|integer|interval|packed_decimal|real|text)(\\s*\\(([0-9]+)\\))?\\b",
+            "captures": {
+                "1": { "name": "keyword.other.vgl-structure" },
+                "2": { "name": "support.type.vgl-structure" },
+                "4": { "name": "constant.numeric.vgl-structure" }
+            }
+        },
+        "keyword-datatype-with-comment": {
             "name": "comment.block.vgl-structure",
-            "begin": "{",
-            "end": "}"
+            "begin": "(?i)\\b(datatype)\\s*(\\{)",
+            "beginCaptures": {
+                "1": { "name": "keyword.other.vgl-structure" },
+                "2": { "name": "comment.block.vgl-structure" }
+            },
+            "end": "(?i)(\\})\\s*(boolean|date|identity|integer|interval|packed_decimal|real|text)(\\s*\\(([0-9]+)\\))?\\b",
+            "endCaptures": {
+                "1": { "name": "comment.block.vgl-structure" },
+                "2": { "name": "support.type.vgl-structure" },
+                "4": { "name": "constant.numeric.vgl-structure" }
+            }
+        },
+        "keyword-parameter": {
+            "name": "keyword.other.vgl-structure",
+            "match": "(?i)\\b(alias|allowed_characters|as|blob|case_sensitive|choose_type|XXdatatype|default|delete_audit|descending|false_word|format|identities|insert_audit|library|links_to|lower_limit|modify_audit|nobuffer|noidentities|noindex|on|on_table|oracle_location|oracle_specific|parent|parent_table|phrase_type|physical_name|prompt|prompt_description|prompt_type|rdb_location|rdb_specific|read_only|rename_table|routine|silent|sqlserver_collation|sqlserver_collation_case_sensitive|sqlserver_location|sqlserver_specific|tableset|true_word|unique|upper_limit|used_for|valid)\\b"
+        },
+
+        "literal": {
+            "patterns": [
+                { "include": "#literal-string" },
+                { "include": "#literal-numeric" },
+                { "include": "#literal-special" },
+                { "include": "#literal-sql" }
+            ]
+        },
+        "literal-string": {
+            "name": "string.quoted.single.vgl-structure",
+            "begin": "'",
+            "end": "'"
+        },
+        "literal-numeric": {
+            "name": "constant.numeric.vgl-structure",
+            "match": "\\s*-?([0-9]+(\\.[0-9]+)?)\\b"
+        },
+        "literal-special": {
+            "name": "constant.language.vgl-structure",
+            "match": "(?i)\\bnull\\b"
+        },
+        "literal-sql": {
+            "name": "markup.raw.vgl-structure",
+            "begin": "(?i)\\b(select_clause|(oracle|sqlserver|rdb)_specific_select)\\b",
+            "beginCaptures": {
+                "1": { "name": "support.type.vgl-structure" }
+            },
+            "end": ";"
+        },
+
+        "comment": {
+            "patterns": [{ "include": "#comment-block" }]
+        },
+        "comment-block": {
+            "name": "comment.block.vgl-structure",
+            "begin": "\\{",
+            "end": "\\}"
         }
-    ]
+    }
 }
