@@ -4,4 +4,4 @@ This is a Visual Studio Code extension for supporting VGL development. Currently
 
 ## Installation
 
-Download the [latest release](https://github.com/icooper/code-vgl/releases/), extract to `~/.vscode/extensions`, and reload Visual Studio Code.
+Download the [latest release](https://github.com/icooper/code-vgl/releases/latest), extract to `~/.vscode/extensions`, and reload Visual Studio Code.
