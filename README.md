@@ -4,4 +4,4 @@ This is a Visual Studio Code extension for supporting VGL development. Currently
 
 ## Installation
 
-Install this extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=IanCooper.code-vgl) or download the [latest release](https://github.com/icooper/code-vgl/releases/latest) and manually extract to `~/.vscode/extensions`.
+Install this extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=IanCooper.code-vgl) or download the repository manually and extract to `~/.vscode/extensions` on your computer.
