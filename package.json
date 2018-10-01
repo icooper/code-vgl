@@ -1,0 +1,25 @@
+{
+    "name": "code-vgl",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": ">=1.22.0"
+    },
+    "publisher": "Ian Cooper",
+    "contributes": {
+        "languages": [{
+            "id": "vgl-structure",
+            "aliases": ["VGL Structure", "structure.txt"],
+            "filenamePatterns": [
+                "structure.txt",
+                "structure.*.txt",
+                "*.structure.txt",
+                "structure.txt.*"
+            ]
+        }],
+        "grammars": [{
+            "language": "vgl-structure",
+            "scopeName": "source.vgl-structure",
+            "path": "./syntaxes/vgl-structure.json"
+        }]
+    }
+}

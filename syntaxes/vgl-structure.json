@@ -1,0 +1,11 @@
+{
+    "scopeName": "vgl-structure",
+    "fileTypes": [ ],
+    "patterns": [
+        {
+            "name": "comment.block.vgl-structure",
+            "begin": "{",
+            "end": "}"
+        }
+    ]
+}
