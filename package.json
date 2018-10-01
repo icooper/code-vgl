@@ -4,7 +4,7 @@
     "engines": {
         "vscode": "^1.22.0"
     },
-    "publisher": "Ian Cooper",
+    "publisher": "IanCooper",
     "author": "Ian Cooper",
     "repository": "https://github.com/icooper/code-vgl",
     "license": "MIT",
