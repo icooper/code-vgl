@@ -1,6 +1,8 @@
 {
     "name": "code-vgl",
-    "version": "0.0.1",
+    "displayName": "VGL Development Toolbox",
+    "description": "Visual Studio Code extension for writing VGL code.",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.22.0"
     },
