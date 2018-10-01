@@ -3,12 +3,32 @@
     "displayName": "VGL Development Toolbox",
     "description": "Visual Studio Code extension for writing VGL code.",
     "version": "0.0.2",
+    "categories": [
+        "Programming Languages"
+    ],
     "engines": {
         "vscode": "^1.22.0"
     },
+    "keywords": [
+        "SampleManager",
+        "LIMS",
+        "VGL",
+        "structure.txt"
+    ],
+    "qna": "https://github.com/icooper/code-vgl/issues",
     "publisher": "IanCooper",
-    "author": "Ian Cooper",
-    "repository": "https://github.com/icooper/code-vgl",
+    "author": {
+        "name": "Ian Cooper",
+        "url": "https://github.com/icooper"
+    },
+    "bugs": {
+        "url": "https://github.com/icooper/code-vgl/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/icooper/code-vgl"
+    },
+    "homepage": "https://github.com/icooper/code-vgl",
     "license": "MIT",
     "contributes": {
         "languages": [{
