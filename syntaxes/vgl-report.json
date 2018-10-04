@@ -79,7 +79,7 @@
         },
         "keyword-builtin-function": {
             "name": "support.function.vgl-report",
-            "match": "(?i)\\b(global|leftstring|rightstring|midstring|strip|justify|pad|blank|index|substitute|substring)(?=\\s*\\()\\b"
+            "match": "(?i)\\b(global|ascii|length|leftstring|rightstring|midstring|strip|justify|pad|blank|index|substitute|substring)(?=\\s*\\()\\b"
         },
         "keyword-builtin-statement": {
             "name": "support.function.vgl-report",
