@@ -5,7 +5,7 @@
     "patterns": [
         { "include": "#comment" },
         { "include": "#literal" },
-        { "include": "#accessor" },
+        { "include": "#expression" },
         { "include": "#keyword" }
     ],
 
@@ -49,19 +49,19 @@
             "match": "(?i)\\b(null|empty|locked|error|true|false)\\b"
         },
 
-        "accessor": {
+        "expression": {
             "patterns": [
-                { "include": "#accessor-function" },
-                { "include": "#accessor-property" }
+                { "include": "#expression-member" },
+                { "include": "#expression-assignment" }
             ]
         },
-        "accessor-function": {
-            "name": "meta.objFunction.vgl-report",
-            "match": "(?i)\\.\\s*[a-z_][a-z0-9_]*\\s*(?=\\()\\b"          
-        },
-        "accessor-property": {
-            "name": "meta.objProperty.vgl-report",
+        "expression-member": {
+            "name": "meta.expression.member.vgl-report",
             "match": "(?i)\\.\\s*[a-z_][a-z0-9_]*\\b"
+        },
+        "expression-assignment": {
+            "name": "meta.expression.assignment.vgl-report",
+            "match": "(?i)\\b[a-z_][a-z0-9_]*(?=\\s*=)\\b"
         },
 
         "keyword": {
@@ -83,7 +83,7 @@
         },
         "keyword-builtin-statement": {
             "name": "support.function.vgl-report",
-            "match": "(?i)\\b(prompt\\s+for|flush_literal|set\\s+((date\\s+)?format|notprotected|compile_option\\s+declare|printercodes|length|width)|restore\\s+(date\\s+)?format|prompt\\s+object|browse\\s+on|define\\s+class|end\\s+class|class|with|format|select|where|order\\s+on|in\\s+object|create\\s+object|initialisation|properties|actions|enable\\s+windows|call_routine|in\\s+library|for\\s+update|assign|update|commit|rollback)\\b"
+            "match": "(?i)\\b(prompt\\s+for|flush_literal|set\\s+((date\\s+)?format|notprotected|compile_option\\s+declare|printercodes|length|width)|restore\\s+(date\\s+)?format|prompt\\s+object|browse\\s+on|define\\s+class|end\\s+class|class|with|format|select|where|order\\s+on|in\\s+object|create\\s+object|initialisation|properties|actions|enable\\s+windows|call_routine|in\\s+library|for\\s+update|assign|update|commit|rollback|using|then\\s+select)\\b"
         },
         "keyword-join": {
             "name": "support.function.vgl-report",
