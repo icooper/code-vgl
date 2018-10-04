@@ -81,7 +81,7 @@
         },
         "keyword-builtin-function": {
             "name": "support.function.vgl-report",
-            "match": "(?i)\\b(global|leftstring|rightstring|strip|justify|pad|blank|index)(?=\\s*\\()\\b"
+            "match": "(?i)\\b(global|leftstring|rightstring|strip|justify|pad|blank|index|substitute|substring)(?=\\s*\\()\\b"
         },
         "keyword-builtin-statement": {
             "name": "support.function.vgl-report",
@@ -101,7 +101,7 @@
         },
         "keyword-operator": {
             "name": "keyword.control.vgl-report",
-            "match": "(?i)\\b(and|or|not)\\b"
+            "match": "(?i)\\b(and|or|not|div|mod)\\b"
         },
         "keyword-header": {
             "name": "support.function.vgl-report",
