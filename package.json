@@ -2,7 +2,7 @@
     "name": "code-vgl",
     "displayName": "VGL Development Toolbox",
     "description": "Visual Studio Code extension for writing VGL code.",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "categories": [
         "Programming Languages"
     ],
@@ -31,20 +31,38 @@
     "homepage": "https://github.com/icooper/code-vgl",
     "license": "MIT",
     "contributes": {
-        "languages": [{
-            "id": "vgl-structure",
-            "aliases": ["VGL Structure", "structure.txt"],
-            "filenamePatterns": [
-                "structure.txt",
-                "structure.*.txt",
-                "*.structure.txt",
-                "structure.txt.*"
-            ]
-        }],
-        "grammars": [{
-            "language": "vgl-structure",
-            "scopeName": "source.vgl-structure",
-            "path": "./syntaxes/vgl-structure.json"
-        }]
+        "languages": [
+            {
+                "id": "vgl-structure",
+                "aliases": ["Structure", "structure.txt"],
+                "filenamePatterns": [
+                    "structure.txt",
+                    "structure.*.txt",
+                    "*.structure.txt",
+                    "structure.txt.*"
+                ]
+            },
+            {
+                "id": "vgl-report",
+                "aliases": ["VGL", "Syntax", "Calculation"],
+                "filenamePatterns": [
+                    "*.rpf",
+                    "*.sxf",
+                    "*.caf"
+                ]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "vgl-structure",
+                "scopeName": "source.vgl-structure",
+                "path": "./syntaxes/vgl-structure.json"
+            },
+            {
+                "language": "vgl-report",
+                "scopeName": "source.vgl-report",
+                "path": "./syntaxes/vgl-report.json"
+            }
+        ]
     }
 }

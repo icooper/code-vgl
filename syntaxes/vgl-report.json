@@ -1,0 +1,115 @@
+{
+    "scopeName": "source.vgl-report",
+    "fileTypes": [ ],
+    "name": "vgl-report",
+    "patterns": [
+        { "include": "#comment" },
+        { "include": "#literal" },
+        { "include": "#accessor" },
+        { "include": "#keyword" }
+    ],
+
+    "repository": {
+        "comment": {
+            "patterns": [{ "include": "#comment-block" }]
+        },
+        "comment-block": {
+            "name": "comment.block.vgl-report",
+            "begin": "\\{",
+            "end": "\\}"
+        },
+
+        "literal": {
+            "patterns": [
+                { "include": "#literal-string-single" },
+                { "include": "#literal-string-double" },
+                { "include": "#literal-string-bang" },
+                { "include": "#literal-numeric" },
+                { "include": "#literal-special" }
+            ]
+        },
+        "literal-string-single": {
+            "name": "string.quoted.single.vgl-report",
+            "begin": "'",
+            "end": "'"
+        },
+        "literal-string-double": {
+            "name": "string.quoted.double.vgl-report",
+            "begin": "\"",
+            "end": "\""
+        },
+        "literal-string-bang": {
+            "name": "string.quoted.other.vgl-report",
+            "begin": "!",
+            "end": "!"
+        },
+        "literal-numeric": {
+            "name": "constant.numeric.vgl-report",
+            "match": "\\s*-?([0-9]+(\\.[0-9]+)?)\\b"
+        },
+        "literal-special": {
+            "name": "constant.language.vgl-report",
+            "match": "(?i)\\b(null|empty|locked|error|true|false)\\b"
+        },
+
+        "accessor": {
+            "patterns": [
+                { "include": "#accessor-function" },
+                { "include": "#accessor-property" }
+            ]
+        },
+        "accessor-function": {
+            "name": "meta.objFunction.vgl-report",
+            "match": "(?i)\\.\\s*[a-z_][a-z0-9_]*\\s*(?=\\()\\b"          
+        },
+        "accessor-property": {
+            "name": "meta.objProperty.vgl-report",
+            "match": "(?i)\\.\\s*[a-z_][a-z0-9_]*\\b"
+        },
+
+        "keyword": {
+            "patterns": [
+                { "include": "#keyword-builtin-function" },
+                { "include": "#keyword-builtin-statement" },
+                { "include": "#keyword-literal" },
+                { "include": "#keyword-type" },
+                { "include": "#keyword-control" },
+                { "include": "#keyword-operator" },
+                { "include": "#keyword-header" },
+                { "include": "#keyword-global" }
+            ]
+        },
+        "keyword-builtin-function": {
+            "name": "support.function.vgl-report",
+            "match": "(?i)\\b(global|leftstring|rightstring|strip|justify|pad|blank|index)(?=\\s*\\()\\b"
+        },
+        "keyword-builtin-statement": {
+            "name": "support.function.vgl-report",
+            "match": "(?i)\\b(prompt\\s+for|flush_literal|set\\s+((date\\s+)?format|notprotected|compile_option\\s+declare|printercodes|length|width)|restore\\s+(date\\s+)?format|prompt\\s+object|browse\\s+on|define\\s+class|end\\s+class|class|with|format|select|where|order\\s+on|in\\s+object|create\\s+object|initialisation|properties|actions)\\b"
+        },
+        "keyword-literal": {
+            "name": "support.function.vgl-report",
+            "match": "(?i)^(literal|\\$endliteral)$"
+        },
+        "keyword-type": {
+            "name": "storage.type.vgl-report",
+            "match": "(?i)\\b(declare|(global\\s+)?constant|array|arraysize|value)\\b"
+        },
+        "keyword-control": {
+            "name": "keyword.control.vgl-report",
+            "match": "(?i)\\b(if|then|elseif|else|endif|while|do|endwhile|(global\\s+)?routine|endroutine|exit|repeat|until|return(?=\\s*\\())\\b"
+        },
+        "keyword-operator": {
+            "name": "keyword.control.vgl-report",
+            "match": "(?i)\\b(and|or|not)\\b"
+        },
+        "keyword-header": {
+            "name": "support.function.vgl-report",
+            "match": "(?i)\\b(join\\s+(library|standard_library)|enable\\s+windows)\\b"
+        },
+        "keyword-global": {
+            "name": "keyword.control.vgl-report",
+            "match": "(?i)^global$"
+        }
+    }
+}
