@@ -2,7 +2,7 @@
     "name": "code-vgl",
     "displayName": "VGL Development Toolbox",
     "description": "Visual Studio Code extension for writing VGL code.",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "categories": [
         "Programming Languages"
     ],
@@ -10,9 +10,9 @@
         "vscode": "^1.22.0"
     },
     "keywords": [
-        "SampleManager",
-        "LIMS",
-        "VGL",
+        "samplemanager",
+        "lims",
+        "vgl",
         "structure.txt"
     ],
     "qna": "https://github.com/icooper/code-vgl/issues",
@@ -34,7 +34,6 @@
         "languages": [
             {
                 "id": "vgl-structure",
-                "aliases": ["Structure", "structure.txt"],
                 "filenamePatterns": [
                     "structure.txt",
                     "structure.*.txt",
@@ -44,7 +43,6 @@
             },
             {
                 "id": "vgl-report",
-                "aliases": ["VGL", "Syntax", "Calculation"],
                 "filenamePatterns": [
                     "*.rpf",
                     "*.sxf",
