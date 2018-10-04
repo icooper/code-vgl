@@ -29,7 +29,7 @@
             ]
         },
         "literal-string-single": {
-            "name": "string.quoted.single.vgl-report",
+            "name": "string.interpolated.vgl-report",
             "begin": "'",
             "end": "'"
         },
@@ -39,7 +39,7 @@
             "end": "\""
         },
         "literal-string-bang": {
-            "name": "string.quoted.other.vgl-report",
+            "name": "string.interpolated.vgl-report",
             "begin": "!",
             "end": "!"
         },
