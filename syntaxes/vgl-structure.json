@@ -58,8 +58,7 @@
         },
         "literal-string": {
             "name": "string.quoted.single.vgl-structure",
-            "begin": "'",
-            "end": "'"
+            "match": "'[^']*'"
         },
         "literal-numeric": {
             "name": "constant.numeric.vgl-structure",
