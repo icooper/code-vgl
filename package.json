@@ -2,7 +2,7 @@
     "name": "code-vgl",
     "displayName": "VGL Development Toolbox",
     "description": "Visual Studio Code extension for writing VGL code.",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "categories": [
         "Programming Languages"
     ],
