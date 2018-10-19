@@ -83,7 +83,7 @@
         },
         "keyword-builtin-statement": {
             "name": "support.function.vgl-report",
-            "match": "(?i)\\b(prompt\\s+for|flush_literal|set\\s+((date\\s+)?format|notprotected|compile_option\\s+declare|printercodes|length|width)|restore\\s+(date\\s+)?format|prompt\\s+object|browse\\s+on|define\\s+class|end\\s+class|class|with|format|select|where|order\\s+on|in\\s+object|create\\s+object|initialisation|properties|actions|enable\\s+windows|call_routine|in\\s+library|for\\s+update|assign|update|commit|rollback|using|then\\s+select)\\b"
+            "match": "(?i)\\b(prompt\\s+for|flush_literal|set\\s+((date\\s+)?format|notprotected|compile_option\\s+declare|printercodes|length|width|name)|restore\\s+(date\\s+)?format|prompt\\s+object|browse\\s+on|define\\s+class|end\\s+class|class|with|format|select|where|order\\s+on|in\\s+object|create\\s+object|initialisation|properties|actions|enable\\s+windows|call_routine|in\\s+library|for\\s+update|assign|update|commit|rollback|using|then\\s+select|on\\s+new\\s+page|endon)\\b"
         },
         "keyword-join": {
             "name": "support.function.vgl-report",
