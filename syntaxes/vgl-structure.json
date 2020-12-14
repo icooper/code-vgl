@@ -5,7 +5,8 @@
     "patterns": [
         { "include": "#keyword" },
         { "include": "#comment" },
-        { "include": "#literal" }
+        { "include": "#literal" },
+        { "include": "#fenced-code-block"}
     ],
 
     "repository": {
@@ -48,12 +49,36 @@
             "match": "(?i)\\b(alias|allowed_characters|as|blob|case_sensitive|choose_type|default|delete_audit|descending|false_word|false|format|identities|insert_audit|library|links_to|lower_limit|modify_audit|nobuffer|noidentities|noindex|on|on_table|oracle_location|oracle_specific|parent|parent_table|phrase_type|physical_name|prompt|prompt_description|prompt_type|rdb_location|rdb_specific|read_only|rename_table|routine|silent|sqlserver_collation|sqlserver_collation_case_sensitive|sqlserver_use_nvarchar|sqlserver_location|sqlserver_specific|tableset|true_word|true|unique|upper_limit|used_for|valid|using|major|minor)\\b"
         },
 
+
+        "fenced-code-block": {
+            "patterns":[
+               
+                {"include": "#fenced-code-block-sql"}
+        
+            ]
+        },
+        "fenced-code-block-sql": {
+            "name": "markup.raw.vgl-structure",
+            "begin": "(?i)\\b(select_clause|(oracle|sqlserver|rdb)_specific_select)\\b",
+            "beginCaptures": {
+                "1": { "name": "support.type.vgl-structure" }
+            },
+            "end": ";",
+            "contentName": "meta.embedded.block.sql",
+            "patterns":[
+                {
+                    "include": "source.sql"
+                }
+            ]
+			
+        },
+
+        
         "literal": {
             "patterns": [
                 { "include": "#literal-string" },
                 { "include": "#literal-numeric" },
-                { "include": "#literal-special" },
-                { "include": "#literal-sql" }
+                { "include": "#literal-special" }
             ]
         },
         "literal-string": {
@@ -68,14 +93,7 @@
             "name": "constant.language.vgl-structure",
             "match": "(?i)\\bnull\\b"
         },
-        "literal-sql": {
-            "name": "markup.raw.vgl-structure",
-            "begin": "(?i)\\b(select_clause|(oracle|sqlserver|rdb)_specific_select)\\b",
-            "beginCaptures": {
-                "1": { "name": "support.type.vgl-structure" }
-            },
-            "end": ";"
-        },
+
 
         "comment": {
             "patterns": [{ "include": "#comment-block" }]
