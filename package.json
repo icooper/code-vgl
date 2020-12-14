@@ -1,73 +1,84 @@
 {
-    "name": "code-vgl",
-    "displayName": "VGL Development Toolbox",
-    "description": "Visual Studio Code extension for writing VGL code.",
-    "version": "0.0.9",
-    "categories": [
-        "Programming Languages"
-    ],
-    "engines": {
-        "vscode": "^1.22.0"
-    },
-    "keywords": [
-        "samplemanager",
-        "lims",
-        "vgl",
-        "rpf",
-        "structure.txt"
-    ],
-    "qna": "https://github.com/icooper/code-vgl/issues",
-    "publisher": "IanCooper",
-    "author": {
-        "name": "Ian Cooper",
-        "url": "https://github.com/icooper"
-    },
-    "bugs": {
-        "url": "https://github.com/icooper/code-vgl/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/icooper/code-vgl"
-    },
-    "homepage": "https://github.com/icooper/code-vgl",
-    "license": "MIT",
-    "contributes": {
-        "languages": [
-            {
-                "id": "vgl-structure",
-                "aliases": [
-                    "Structure.txt"
-                ],
-                "filenamePatterns": [
-                    "structure.txt",
-                    "structure.*.txt",
-                    "*.structure.txt",
-                    "structure.txt.*"
-                ]
-            },
-            {
-                "id": "vgl-report",
-                "aliases": [
-                    "VGL Report"
-                ],
-                "filenamePatterns": [
-                    "*.rpf",
-                    "*.sxf",
-                    "*.caf"
-                ]
-            }
-        ],
-        "grammars": [
-            {
-                "language": "vgl-structure",
-                "scopeName": "source.vgl-structure",
-                "path": "./syntaxes/vgl-structure.json"
-            },
-            {
-                "language": "vgl-report",
-                "scopeName": "source.vgl-report",
-                "path": "./syntaxes/vgl-report.json"
-            }
-        ]
-    }
+	"name": "code-vgl",
+	"displayName": "VGL Development Toolbox",
+	"description": "Visual Studio Code extension for writing VGL code.",
+	"version": "0.0.9",
+	"categories": [
+		"Programming Languages"
+	],
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"keywords": [
+		"samplemanager",
+		"lims",
+		"vgl",
+		"rpf",
+		"structure.txt"
+	],
+	"qna": "https://github.com/icooper/code-vgl/issues",
+	"publisher": "IanCooper",
+	"author": {
+		"name": "Ian Cooper",
+		"url": "https://github.com/icooper"
+	},
+	"bugs": {
+		"url": "https://github.com/icooper/code-vgl/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/icooper/code-vgl"
+	},
+	"homepage": "https://github.com/icooper/code-vgl",
+	"license": "MIT",
+	"contributes": {
+		"languages": [
+			{
+				"id": "vgl-structure",
+				"aliases": [
+					"Structure.txt"
+				],
+				"filenamePatterns": [
+					"structure.txt",
+					"structure.*.txt",
+					"*.structure.txt",
+					"structure.txt.*"
+				]
+			},
+			{
+				"id": "vgl-report",
+				"aliases": [
+					"VGL Report"
+				],
+				"filenamePatterns": [
+					"*.rpf",
+					"*.sxf",
+					"*.caf"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "vgl-structure",
+				"scopeName": "source.vgl-structure",
+				"path": "./syntaxes/vgl-structure.json",
+				"embeddedLanguages": {
+					"meta.embedded.block.sql": "sql"
+				}
+			},
+			{
+				"language": "vgl-report",
+				"scopeName": "source.vgl-report",
+				"path": "./syntaxes/vgl-report.json",
+				"embeddedLanguages": {
+					"meta.embedded.block.sql": "sql"
+				}
+			}
+		]
+	},
+	"__metadata": {
+		"id": "5bb55540-02ea-4781-9d54-2c2605ee40c0",
+		"publisherId": "bd390023-5263-4ea7-a00a-2735920b768a",
+		"publisherDisplayName": "Ian Cooper"
+	}
 }
